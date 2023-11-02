@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
     {
         if(other.tag == "Enemy" && !hasDamaged)
         {
+            other.GetComponent<EnermyHealthController>().TakeDamage((int)damagedAmount);
             hasDamaged = true;
         }
 
